@@ -3,14 +3,14 @@ FROM phusion/baseimage:0.9.9
 MAINTAINER ryanstockdale
 
 # setup ports and volumes to expose for dev
-VOLUME ["/home/working"]
+VOLUME ["/var/working"]
 
 # basic env
 ENV DEBIAN_FRONTEND noninteractive
 ENV REFRESHED_AT 2017_10_04_1
 
 # install node
-WORKDIR /home
+WORKDIR /var
 
 RUN mkdir -p working
 
@@ -28,4 +28,4 @@ RUN apt-get update && apt-get -y install nodejs \
 RUN apt-get install make
     
 # change working directory 
-WORKDIR /home/working
+WORKDIR /var/working
