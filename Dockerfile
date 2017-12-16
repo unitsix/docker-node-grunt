@@ -10,7 +10,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV REFRESHED_AT 2017_10_04_1
 
 # install node
-WORKDIR /var
+WORKDIR /home
 
 RUN mkdir -p working
 
